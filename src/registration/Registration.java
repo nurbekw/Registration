@@ -1,3 +1,5 @@
+package registration;
+
 public abstract class Registration {
     private String login;
     private String password;

@@ -1,7 +1,14 @@
-import java.util.Arrays;
-import java.util.Random;
+package person;
 
-public class Person extends Registration implements Reg{
+import registration.Reg;
+import registration.Registration;
+
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Person extends Registration implements Reg {
     private String log;
     private String pass;
     private long[] ID;
@@ -79,7 +86,7 @@ public class Person extends Registration implements Reg{
         Random random = new Random();
         int sum = 0;
         for (int i = 0; i < ID.length; i++) {
-         ID[i] = random.nextLong(10000000,100000000);
+            ID[i] = random.nextLong(10000000, 100000000);
         }
         return sum;
     }
@@ -98,7 +105,6 @@ public class Person extends Registration implements Reg{
     public void Vv() {
         System.out.println("\n\tВы вошли в аккаунт!");
     }
-
     @Override
     public String toString() {
         return super.toString()+
